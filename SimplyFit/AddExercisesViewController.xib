@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddExercisesViewController" customModule="SimplyFit" customModuleProvider="target">
+            <connections>
+                <outlet property="addMovementButton" destination="PEw-BE-IKR" id="4vd-iW-UEL"/>
+                <outlet property="cancelButton" destination="bPy-u3-nkD" id="u9h-fa-w4f"/>
+                <outlet property="instructionsLabel" destination="C0A-k7-ghw" id="qP0-DA-XLj"/>
+                <outlet property="movementsTableView" destination="5e3-iC-8VZ" id="Sdx-sa-w5A"/>
+                <outlet property="navigationBar" destination="vuo-80-TTW" id="NHa-MC-Klp"/>
+                <outlet property="newMovementButton" destination="eFb-bD-BBT" id="CAZ-3O-2A6"/>
+                <outlet property="searchBarContainerView" destination="rmc-id-adI" id="3Ea-gP-BWx"/>
+                <outlet property="stackViewBottomConstraint" destination="9JF-gL-XCr" id="Fma-vM-Aon"/>
+                <outlet property="supersetButton" destination="Ade-P7-xQ1" id="a0M-6t-TxR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuo-80-TTW">
+                    <rect key="frame" x="0.0" y="38" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Movements" id="4Ud-Kj-ZPE">
+                            <barButtonItem key="leftBarButtonItem" title="Cancel" id="bPy-u3-nkD"/>
+                            <barButtonItem key="rightBarButtonItem" title="New" id="eFb-bD-BBT"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5e3-iC-8VZ">
+                    <rect key="frame" x="0.0" y="86" width="375" height="537"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <view key="tableHeaderView" contentMode="scaleToFill" id="rmc-id-adI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Exercises to &quot;New Routine&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0A-k7-ghw">
+                    <rect key="frame" x="0.0" y="22" width="375" height="16"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5Np-WJ-m3o">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ade-P7-xQ1">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Superset"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEw-BE-IKR">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Add Movement"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="DD3-eA-l1s"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="yKs-zY-NCz"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vuo-80-TTW" firstAttribute="top" secondItem="C0A-k7-ghw" secondAttribute="bottom" id="2QE-QS-cO4"/>
+                <constraint firstItem="5e3-iC-8VZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Qp-E1-i86"/>
+                <constraint firstItem="5Np-WJ-m3o" firstAttribute="top" secondItem="5e3-iC-8VZ" secondAttribute="bottom" id="60P-iC-t29"/>
+                <constraint firstAttribute="bottom" secondItem="5Np-WJ-m3o" secondAttribute="bottom" id="9JF-gL-XCr"/>
+                <constraint firstItem="5e3-iC-8VZ" firstAttribute="top" secondItem="vuo-80-TTW" secondAttribute="bottom" constant="4" id="J1L-eS-fAD"/>
+                <constraint firstAttribute="trailing" secondItem="5Np-WJ-m3o" secondAttribute="trailing" id="T8P-yd-2o3"/>
+                <constraint firstItem="5Np-WJ-m3o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YKq-Tj-NH1"/>
+                <constraint firstAttribute="trailing" secondItem="5e3-iC-8VZ" secondAttribute="trailing" id="aYJ-Ur-5b7"/>
+                <constraint firstItem="C0A-k7-ghw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iDI-zB-GKc"/>
+                <constraint firstAttribute="trailing" secondItem="vuo-80-TTW" secondAttribute="trailing" id="nlf-lu-b1e"/>
+                <constraint firstItem="C0A-k7-ghw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="pOr-nH-QUi"/>
+                <constraint firstItem="vuo-80-TTW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vjA-Bs-JKV"/>
+                <constraint firstAttribute="trailing" secondItem="C0A-k7-ghw" secondAttribute="trailing" id="wEp-tl-Onu"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
